@@ -1,29 +1,29 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, SafeAreaView, Text } from 'react-native';
 import AppLoading from 'expo-app-loading';
-import * as SplashScreen from 'expo-splash-screen';
+import { globalStyle } from './styles/globalStyle';
 import * as Font from 'expo-font';
 import React, { useState } from 'react';
-import Navigate from './navigate/Navigate';
-const fonts = () => Font.loadAsync({
-  'mt-bold': require('./assets/fonts/Montserrat-Black.ttf'),
-  'mt-light': require('./assets/fonts/Montserrat-Light.ttf')
-})
 
-SplashScreen.preventAutoHideAsync();
+const fonts = () => Font.loadAsync({
+  'mt-bold': require('./assets/fonts/Montserrat-Italic-VariableFont_wght.ttf'),
+  'mt-light': require('./assets/fonts/Montserrat-VariableFont_wght.ttf')
+})
 
 export default function App() {
   const [font, setFont] = useState(false);
 
   if (font) {
     return (
-      <Navigate />
+      <SafeAreaView style={globalStyle.main}>
+        <Text style={globalStyle.title}>Hello</Text>
+      </SafeAreaView>
     );
   } else {
     return (
       <AppLoading
         startAsync={fonts}
         onFinish={() => setFont(true)}
-        onError={console.warn} />
+        onError={(err) => console.log(err)} />
     )
   }
 }
