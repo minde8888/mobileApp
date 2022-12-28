@@ -4,12 +4,14 @@ import * as SplashScreen from 'expo-splash-screen';
 import * as Font from 'expo-font';
 import React, { useState } from 'react';
 import Navigate from './navigate/Navigate';
-const fonts = () => Font.loadAsync({
-  'mt-bold': require('./assets/fonts/Montserrat-Black.ttf'),
-  'mt-light': require('./assets/fonts/Montserrat-Light.ttf')
-})
 
 SplashScreen.preventAutoHideAsync();
+
+const fonts = () => Font.loadAsync({
+  'mt-bold': require('./assets/fonts/Montserrat-Bold.ttf'),
+  'mt-medium': require('./assets/fonts/Montserrat-Medium.ttf'),
+  'mt-light': require('./assets/fonts/Montserrat-Light.ttf')
+})
 
 export default function App() {
   const [font, setFont] = useState(false);
