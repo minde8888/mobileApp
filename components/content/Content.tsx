@@ -17,7 +17,7 @@ export default function Content({ route }: StackNavigationProps) {
     return (
         <View style={globalStyle.main}>
             <Image source={{ uri: route.params.img }}
-                style={{ width: 400, height: 400 }} />
+                style={styles.image} />
             <Text style={globalStyle.title}>{route.params.name}</Text>
             <Text style={styles.full}>{route.params.full}</Text>
         </View>
@@ -25,11 +25,15 @@ export default function Content({ route }: StackNavigationProps) {
 }
 
 const styles = StyleSheet.create({
-    full:{
+    full: {
         fontFamily: 'mt-medium',
         fontSize: 16,
         textAlign: 'center',
-        marginTop:20,
+        marginTop: 20,
         color: '#f55151'
+    },
+    image: {
+        width: 400,
+        height: 400
     }
 });

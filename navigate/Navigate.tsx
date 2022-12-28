@@ -32,7 +32,8 @@ export default function Navigate() {
                 options={{
                     title: 'Home',
                     headerStyle: { backgroundColor: '#eb5d3d' },
-                    headerTitleStyle: { fontSize: 30 }
+                    headerTitleStyle: { fontSize: 30 },
+                    headerTitleAlign:'center'
                 }}
             />
             <RootStack.Screen
