@@ -11,11 +11,17 @@ export type RootStackParamList = {
         name: string;
         anons: string;
         full: string;
+        img: string;
     };
     Contacts: undefined;
 };
 
 const RootStack = createNativeStackNavigator<RootStackParamList>();
+
+type StyleProp = {
+    backgroundColor: string;
+    height: number;
+}
 
 export default function Navigate() {
     return <NavigationContainer>
@@ -23,7 +29,11 @@ export default function Navigate() {
             <RootStack.Screen
                 name="Main"
                 component={Main}
-                options={{ title: 'Home' }}
+                options={{
+                    title: 'Home',
+                    headerStyle: { backgroundColor: '#eb5d3d' },
+                    headerTitleStyle: { fontSize: 30 }
+                }}
             />
             <RootStack.Screen
                 name="Content"
