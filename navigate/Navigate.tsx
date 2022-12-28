@@ -18,11 +18,6 @@ export type RootStackParamList = {
 
 const RootStack = createNativeStackNavigator<RootStackParamList>();
 
-type StyleProp = {
-    backgroundColor: string;
-    height: number;
-}
-
 export default function Navigate() {
     return <NavigationContainer>
         <RootStack.Navigator>

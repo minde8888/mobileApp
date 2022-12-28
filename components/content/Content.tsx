@@ -6,14 +6,8 @@ import { NativeStackScreenProps } from '@react-navigation/native-stack';
 
 type StackNavigationProps = NativeStackScreenProps<RootStackParamList, 'Content'>;
 
-
 export default function Content({ route }: StackNavigationProps) {
 
-
-    // const loadScene = () => {
-    //     navigation.goBack();
-    // }
-    //            <Button title='Open page' onPress={loadScene}/>
     return (
         <View style={globalStyle.main}>
             <Image source={{ uri: route.params.img }}
