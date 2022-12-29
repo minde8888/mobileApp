@@ -44,7 +44,7 @@ export default function Main({ navigation }: StackNavigationProps) {
                 renderItem={({ item }) => (
                     <TouchableOpacity style={styles.item} onPress={() => navigation.navigate('Content', item)}>
                         <Image source={{ uri: item.img }}
-                            style={{ width: 400, height: 400 }} />
+                            style={{ width: "90%", height: 400 }} />
                         <Text style={styles.title}>{item.name}</Text>
                         <Text style={styles.anons}>{item.anons}</Text>
                     </TouchableOpacity>)}
@@ -66,6 +66,8 @@ const styles = StyleSheet.create({
         marginBottom: 30,
     },
     item: {
+        flex:1,
+        alignItems: 'center',
         width: '100%',
         marginBottom: 30,
     },

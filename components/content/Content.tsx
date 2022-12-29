@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
         color: '#f55151'
     },
     image: {
-        width: 400,
+        width: "100%",
         height: 400
     }
 });

@@ -1,6 +1,5 @@
 import React from "react";
 import Main from "../components/main/Main";
-import Contacts from "../components/contacts/Contacts";
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Content from "../components/content/Content";
@@ -35,11 +34,6 @@ export default function Navigate() {
                 name="Content"
                 component={Content}
                 options={{ title: 'Content' }}
-            />
-            <RootStack.Screen
-                name="Contacts"
-                component={Contacts}
-                options={{ title: 'Contacts' }}
             />
         </RootStack.Navigator>
     </NavigationContainer>
